@@ -1,30 +1,30 @@
 pipeline{
-agent : any
+agent any
 
-stages{
-stage("Git Checkout"){
-steps{
-echo 'Git Checkout'
-}
-
-}
-stage("Build App"){
-steps{
-echo 'Build App'
-}
-
-}
-stage("owasp scan"){
-steps{
-echo 'owasp scan'
-}
-
-}
-stage("Sonar scan"){
-steps{
-echo '"Sonar scan'
-}
-
-}
-}
+  stages{
+    stage('Git Checkout'){
+    steps{
+    echo 'Git Checkout'
+    }
+    
+    }
+    stage('Build App'){
+    steps{
+    echo 'Build App'
+    }
+    
+    }
+    stage('owasp scan'){
+    steps{
+    echo 'owasp scan'
+    }
+    
+    }
+    stage('Sonar scan'){
+    steps{
+    echo 'Sonar scan'
+    }
+  
+  }
+  }
 }
