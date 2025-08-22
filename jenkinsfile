@@ -1,6 +1,12 @@
 pipeline{
 agent any
 
+tools{
+  jdk 'JDK'
+  maven 'Maven'
+  sonar 'Sonar'
+}
+
   stages{
     stage('Git Checkout'){
     steps{
