@@ -1,0 +1,21 @@
+pipeline{
+agent : any
+}
+stages{
+stage("Git Checkout"){
+steps{}
+
+}
+stage("Build App"){
+steps{}
+
+}
+stage("owasp scan"){
+steps{}
+
+}
+stage("Sonar scan"){
+steps{}
+
+}
+}
