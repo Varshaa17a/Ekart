@@ -11,6 +11,7 @@ agent any
     stage('Build App'){
     steps{
     echo 'Build App'
+    sh 'mvn clean package' 
     }
     
     }
