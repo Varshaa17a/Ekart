@@ -3,19 +3,27 @@ agent : any
 }
 stages{
 stage("Git Checkout"){
-steps{}
+steps{
+echo 'Git Checkout'
+}
 
 }
 stage("Build App"){
-steps{}
+steps{
+echo 'Build App'
+}
 
 }
 stage("owasp scan"){
-steps{}
+steps{
+echo 'owasp scan'
+}
 
 }
 stage("Sonar scan"){
-steps{}
+steps{
+echo '"Sonar scan'
+}
 
 }
 }
