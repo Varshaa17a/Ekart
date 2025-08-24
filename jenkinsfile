@@ -7,7 +7,7 @@ tools{
  
 }
 environment {
-      SONARQUBE = 'Sonar'  
+      SONARQUBE = 'Sonar'
   }
 
   stages{
