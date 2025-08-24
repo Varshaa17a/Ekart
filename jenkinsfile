@@ -4,8 +4,11 @@ agent any
 tools{
   jdk 'JDK'
   maven 'Maven'
-  sonar 'Sonar' 
+ 
 }
+environment {
+      SONARQUBE = 'Sonar'  
+  }
 
   stages{
     stage('Git Checkout'){
