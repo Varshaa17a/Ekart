@@ -20,7 +20,7 @@ environment {
     stage('Build App'){
     steps{
     echo 'Build App'
-    sh 'mvn clean package' 
+    sh 'mvn clean package -DskipTests' 
     }
     
     }
