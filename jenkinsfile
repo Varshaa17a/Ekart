@@ -4,7 +4,7 @@ agent any
 tools{
   jdk 'JDK'
   maven 'Maven'
-  sonar 'Sonar'
+  sonar 'Sonar' 
 }
 
   stages{
