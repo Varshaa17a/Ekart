@@ -35,6 +35,9 @@ environment {
     stage('Sonar scan'){
     steps{
     echo 'Sonar scan'
+    withSonarQubeEnv('Sonar') {   // name must match Jenkins config
+            sh 'mvn sonar:sonar -Dsonar.projectKey=Ekart -Dsonar.host.url=http://54.85.155.202:9000 -Dsonar.login=varsha'
+        }
     }
   
   }
