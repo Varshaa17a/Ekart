@@ -27,6 +27,8 @@ environment {
     stage('owasp scan'){
     steps{
     echo 'owasp scan'
+    dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'OWASP-DC'
+    dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
     }
     
     }
