@@ -20,6 +20,7 @@ sh 'mvn clean package -DskipTests'
 }
 stage('stage3: Docker build'){
 steps{
+sh 'whoami'
 sh 'docker build .'
 }
 }
