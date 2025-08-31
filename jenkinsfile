@@ -21,11 +21,11 @@ sh 'mvn clean package -DskipTests'
 stage('stage3: Docker build and push'){
 steps{
 sh 'whoami'
-sh 'docker build -t vps17aug@gmail.com/ekart:1 .'
+sh 'docker build -t vps17aug/ekart:1 .'
 sh  withCredentials([usernamePassword(credentialsId: 'Docker', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh '''
                         echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-                        docker push vps17aug@gmail.com/ekart:1
+                        docker push vps17aug/ekart:1
                     '''
 }
 }
