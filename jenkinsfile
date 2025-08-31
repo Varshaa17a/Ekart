@@ -18,10 +18,15 @@ echo 'stage2: Maven Build'
 sh 'mvn clean package -DskipTests'
 }
 }
-stage('stage3: Docker build'){
+stage('stage3: Docker build and push'){
 steps{
 sh 'whoami'
-sh 'docker build .'
+sh 'docker build -t ekart:1 .'
+sh  withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh '''
+                        echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+                        docker push ekart:1
+                    '''
 }
 }
   }
