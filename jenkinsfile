@@ -3,10 +3,14 @@ agent any
 
 stages{
 stage('stahe1'){
+steps{
   echo 'stage1'  
     }
+}
 stage('stage2'){
- echo 'stage2'
+ steps{
+echo 'stage2'
+}
 }
   }
 }
