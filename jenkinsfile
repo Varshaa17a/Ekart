@@ -4,12 +4,14 @@ agent any
 stages{
 stage('stahe1'){
 steps{
-  echo 'stage1'  
+  echo 'stage1: Checkout SCM'  
+   "checkout scm"
     }
 }
-stage('stage2'){
+stage('stage2: Maven Build'){
  steps{
-echo 'stage2'
+echo 'stage2: Maven Build'
+sh 'mvn clean package'
 }
 }
   }
