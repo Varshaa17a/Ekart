@@ -5,7 +5,7 @@ stages{
 stage('stahe1'){
 steps{
   echo 'stage1: Checkout SCM'  
-   "checkout scm"
+   'checkout scm'
     }
 }
 stage('stage2: Maven Build'){
