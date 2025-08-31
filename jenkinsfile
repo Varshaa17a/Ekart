@@ -4,8 +4,6 @@ agent any
 tools{
 maven 'Maven'
 jdk 'JDK'
-docker 'Docker'
-
 }
 stages{
 stage('stahe1'){
@@ -18,6 +16,11 @@ stage('stage2: Maven Build'){
  steps{
 echo 'stage2: Maven Build'
 sh 'mvn clean package'
+}
+}
+stage('stage3: Docker build'){
+steps{
+sh 'docker build .'
 }
 }
   }
